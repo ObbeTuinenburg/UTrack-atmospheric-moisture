@@ -1,0 +1,1 @@
+7 1 1 ./input/Amazon.nc ./output/outAmazon_7.nc
