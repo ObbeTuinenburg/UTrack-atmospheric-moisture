@@ -138,7 +138,6 @@ int trajectory(struct meteoday* meteo, struct simulation_settings s,int particle
 int eulerian_simulation(struct meteoday* meteo,struct simulation_settings simulation);
 float get_starting_height(struct meteoday* meteo,struct simulation_settings simulation,int lat_idx,int lon_idx);
 float get_potential_temp(struct meteoday* meteo,int i,int j,float lev);
-int get_isentropic_level(struct meteoday* meteo,int curlatidx,int curlonidx,float theta);
 int get_3d_interpolation(struct state* outstate,struct meteoday* meteo,int curlatidx,int curlonidx,int curlevidx,float latfrac,float lonfrac,float levfrac,float timefrac);
 int get_2d_interpolation(struct state* outstate,struct meteoday* meteo,int curlatidx,int curlonidx,float latfrac,float lonfrac,float timefrac);
 struct state gridcell_state(struct loc curloc,struct meteoday* meteo, struct simulation_settings s);
