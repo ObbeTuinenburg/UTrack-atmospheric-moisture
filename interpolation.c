@@ -21,10 +21,6 @@ struct state gridcell_state(struct loc curloc,struct meteoday* meteo, struct sim
 	outstate.v=(meteo[0].nf[i]*(*meteo[0].nfscale)+(*meteo[0].nfadd))/outstate.PW;}
 
 	if (s.simulation_number>1){ // 3D simulation
-		if (s.simulation_number==3){ // Find isentropic level
-			curlevidx=get_isentropic_level(meteo,curlatidx,curlonidx,curloc.theta);
-			}
-
 		if (s.simulation_number==2||s.simulation_number==4||s.simulation_number==5||s.simulation_number>7){ // 
 			if (curloc.lev<750){
 			curlevidx=(int)floor((curloc.lev-50)/50.0);}
@@ -60,12 +56,7 @@ struct state interpolate(struct loc curloc,struct meteoday* meteo, struct simula
 	outstate.v=outstate.nf/outstate.PW;}
 
 	if (s.simulation_number>1){ // 3D simulation
-		if (s.simulation_number==3){ // Find isentropic level
-			curlevidx=get_isentropic_level(meteo,curlatidx,curlonidx,curloc.theta);
-			levfrac=0;
-			}
-
-		if (s.simulation_number==2||s.simulation_number==4||s.simulation_number==5||s.simulation_number>7){ // 
+			if (s.simulation_number==2||s.simulation_number==4||s.simulation_number==5||s.simulation_number>7){ // 
 			curlevidx=(int)floor((curloc.lev-500)/50.0);
 			if (curloc.lev<750){
 			curlevidx=(int)floor((curloc.lev-50)/50.0);
