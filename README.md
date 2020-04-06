@@ -1,4 +1,4 @@
-# UTrack
+# UTrack-atmospheric-moisture
 Utrecht atmospheric moisture tracking model
 
 This is the source code for atmospheric moisture tracking model to track the flows moisture from evaporation to the next precipitation location based on simulations forced with ERA5 reanalysis data.
